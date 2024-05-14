@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(92deg, darkblue, blue, lightblue);
+        }
+        table{
+            border-collapse: collapse;
+            margin-top:15%;
+            color: white;
+        }
+        table th{
+            padding: 1rem 2rem;
+        }
+        tr td{
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <table border="1"style="border:1px solid white">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Roll No</th>
+            <th>Mark1</th>
+            <th>Mark2</th>
+            <th>Mark3</th>
+            <th>Mark4</th>
+            <th>Mark5</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+            <td>{{i[7]}}</td>
+            <td>{{i[8]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
